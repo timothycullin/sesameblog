@@ -17,7 +17,8 @@ export default function AuthorPage({ authorPosts, authorName, authorBio, authorI
             <SEO
                 title={`${authorName} | Sesame Blog`}
                 description={`Read articles by ${authorName} on administrative law, immigration and human rights.`}
-                image={authorImage ? `https://your-site.com${authorImage}` : null}
+                image={authorImage ? `https://sesameblog.vercel.app${authorImage}` : null}
+                url={`https://sesameblog.vercel.app/author/${authorSlug}`}
             />
 
             <Navbar />
@@ -104,7 +105,8 @@ export async function getStaticProps({ params }) {
     const authorImage = authorImageData[authorSlug] || '';
 
     return {
-        props: { authorPosts, authorName, authorBio, authorImage },
+        props: { authorPosts, authorName, authorBio, authorImage, authorSlug },
         revalidate: 10,
     };
+
 }
