@@ -24,7 +24,7 @@ export default function BlogPost({ post }) {
 
     // Helper function to encode URLs for sharing
     const getShareUrl = (platform) => {
-        const postUrl = `https://your-site.com/blog/${post.slug}`;
+        const postUrl = `https://sesame-blog.vercel.app/blog/${post.slug}`;
         switch (platform) {
             case 'twitter':
                 return `https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(post.title)}`;
@@ -43,7 +43,8 @@ export default function BlogPost({ post }) {
             <SEO
                 title={`${post.title} | Sesame Blog`}
                 description={post.excerpt || "Read this blog post on Sesame Blog"}
-                image={post.imageUrl ? `https://your-site.com${post.imageUrl}` : null}
+                image={post.imageUrl ? `https://sesame-blog.vercel.app${post.imageUrl}` : null}
+                url={`https://sesame-blog.vercel.app/blog/${post.slug}`}
             />
 
             <main className={styles['blog-post-container']}>
