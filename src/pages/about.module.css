@@ -1,0 +1,44 @@
+.main h1 {
+    position: relative;
+    font-family: "League Spartan", sans-serif;
+    font-size: 2.5rem;           /* 40px → 2.5rem */
+    font-weight: 500;
+    margin-bottom: var(--space-3); /* exact match */
+    padding-left: 0.75rem;       /* 12px → no root equivalent */
+}
+
+.main h1::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.25rem;              /* 4px → no root equivalent */
+    height: 100%;
+    background-color: #1e88e5;
+    border-radius: 0.125rem;     /* 2px → no root equivalent */
+    content: '';
+}
+
+.main p {
+    color: #222;
+    font-size: 1rem;             /* 16px → 1rem */
+    line-height: 1.5;            /* 24px → 1.5rem */
+    margin-bottom: 1.25rem;      /* 20px → no root equivalent */
+}
+
+.paragraphs-highlight {
+    padding: var(--space-2);     /* exact match */
+    background-color: #e0f0ff;
+    border-radius: 0.5rem;       /* 8px → no root equivalent */
+}
+
+.paragraphs-highlight p:last-child {
+    margin-bottom: 0;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 2rem;         /* 32px → no root equivalent */
+    }
+}
