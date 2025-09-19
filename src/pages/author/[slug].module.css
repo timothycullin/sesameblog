@@ -31,7 +31,6 @@
   font-size: 1.75rem;   /* 28px -> 1.75rem */
   font-weight: 600;
   margin-bottom: var(--space-2);
-  margin-top: 0;
 }
 
 .author-bio-text {

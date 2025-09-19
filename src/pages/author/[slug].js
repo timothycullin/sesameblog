@@ -7,7 +7,7 @@ import AppImage from '../../components/AppImage';
 import SEO from '../../components/SEO';
 import styles from './[slug].module.css';
 
-export default function AuthorPage({ authorPosts, authorName, authorBio, authorImage }) {
+export default function AuthorPage({ authorPosts, authorName, authorBio, authorImage, authorSlug }) {
     const router = useRouter();
 
     if (router.isFallback) return <div>Loading author...</div>;
@@ -62,7 +62,6 @@ export default function AuthorPage({ authorPosts, authorName, authorBio, authorI
                 </section>
 
                 {/* Posts by Author */}
-                {/* PostList will use AppImage for all post thumbnails */}
                 <PostList posts={authorPosts} centered />
             </main>
 
