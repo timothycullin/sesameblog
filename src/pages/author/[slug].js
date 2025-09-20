@@ -91,7 +91,7 @@ export async function getStaticProps({ params }) {
 
     const authorBioData = {
         'tim-cullin':
-            "Tim Cullin is a lawyer focusing on administrative law, refugee policy and human rights.\nContact: cullintimothy@gmail.com",
+            "Tim Cullin is a lawyer focusing on administrative law, refugee law and human rights.\nContact: cullintimothy@gmail.com",
 
     };
 
